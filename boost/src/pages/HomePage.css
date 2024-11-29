@@ -2,7 +2,8 @@
 
 /* General Page Styling */
 body {
-    background-color: #42302F; /* Dark background color */
+	background-color: #142b22;
+
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
@@ -30,17 +31,25 @@ body {
     flex-direction: column;
     flex: 1; /* Allows the content area to expand and contract */
     color: #BDD392; /* Light green text */
+	background-color: #6f6b50;
+	padding: 35px;
 }
 
 /* Greeting and Date */
 .home-greeting {
-    font-size: 2em;
+	font-family: 'Impact', sans-serif;
+	color: #d0ceba;
+    font-size: 4em;
     margin-bottom: 10px;
 }
 
 .home-date {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
+	margin-top: 0px;
+	color: #d0ceba;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
 }
 
 /* Content Area */
@@ -49,6 +58,7 @@ body {
     overflow-y: auto; /* Adds scroll if content overflows */
     padding: 20px;
     margin-top: 20px;
+	background-color: #3a3738;
 }
 
 /* Questions */
