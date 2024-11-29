@@ -11,20 +11,6 @@ body {
     min-height: 100vh; /* Ensures the body takes up the full viewport height */
 }
 
-/* Header Styling */
-.header {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.header h1 {
-    align-items: left;
-    margin: 0;
-    padding: 20px;
-    font-size: 2.5em;
-    color: #333;
-}
-
 /* Main Container */
 .home-page {
     display: flex;
@@ -33,6 +19,7 @@ body {
     color: #BDD392; /* Light green text */
 	background-color: #6f6b50;
 	padding: 35px;
+    padding-bottom: 60px; /* Padding for the footer */
 }
 
 /* Greeting and Date */
@@ -69,22 +56,78 @@ body {
 }
 
 /* Footer Styling */
-footer {
+.footer {
     background-color: #2F1E1C; /* Slightly darker background for the footer */
     color: #BDD392; /* Light green text for consistency */
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid #5C4A48; /* Subtle border */
-    flex-shrink: 0; /* Prevents the footer from shrinking */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensures the footer is above content */
 }
 
-/* Ensure Footer is at the Bottom */
-body > .home-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.submit{
+    display: flex;           /* Enable flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100%;            /* Make sure container has a height to center vertically */
+    width: 100%;             
 }
 
-.home-trackers {
-    flex: 1;
+/* Styles for the message container */
+.message-container {
+    background-color: #f4f7fa; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 20px;
+    margin-top: 30px;
+    width: 80%;
+    max-width: 600px; /* Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto; /* Center the container */
+    text-align: center;
+    display: block;
 }
+
+/* Title or header of the message container */
+.message-container p:first-child {
+    font-size: 1.25rem; /* Slightly larger font size */
+    font-weight: bold; /* Bold for emphasis */
+    color: #333; /* Dark color for the header */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+/* Styles for the actual message */
+.message-shown {
+    font-size: 1rem; /* Regular font size */
+    color: #555; /* Medium gray text color */
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 20px; /* Add space below the message */
+    font-weight: normal; /* Normal font weight for the message */
+}
+
+/* Optional: Add a subtle border at the bottom for visual separation */
+.message-container p:last-child {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Optional: Add a close button style for dismissing the message (if you plan to add one) */
+.message-container .close-button {
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.message-container .close-button:hover {
+    background-color: #e0e0e0;
+}
+

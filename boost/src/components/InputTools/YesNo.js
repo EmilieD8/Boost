@@ -1,25 +1,12 @@
 import React, { useState } from 'react';
 import './YesNo.css';
+import Button from '../Button/Button';
 
-const YesNoInput = () => {
-  // Set the initial state to "Yes" so it's the default
-  const [userChoice, setUserChoice] = useState("Yes");
-
-  // Function to handle the Yes button click
-  const handleYesClick = () => {
-    setUserChoice("Yes");
-  };
-
-  // Function to handle the No button click
-  const handleNoClick = () => {
-    setUserChoice("No");
-  };
-
+const YesNoInput = ({ value, onChange }) => {
   return (
-    <div className="yes-no-container">      
-      {/* Display buttons for Yes and No */}
-      <button onClick={handleYesClick}>Yes</button>
-      <button onClick={handleNoClick}>No</button>
+    <div className="yes-no-container">
+      <Button text="Ja" onClick={() => onChange("Yes")} className={value === "Yes" ? "active" : ""}/>
+      <Button text="Nein" onClick={() => onChange("No")} className={value === "No" ? "active" : ""}/>
     </div>
   );
 };
