@@ -16,10 +16,10 @@ function LandingPage() {
             {/* Content Wrapper */}
             <div className="landing-content">
                 <h2 className="landing-heading">
-                    BOOST
+                     Willkommen bei Boost
                 </h2>
                 <p className="landing-subheading">
-                    Get to the core of your inner forest!
+                    Deinem persönlichen Tool für mehr Energie und Fokus.
                 </p>
                 <div className="landing-button-container">
                     <Button text="Continue" onClick={navigateToOnboarding} />

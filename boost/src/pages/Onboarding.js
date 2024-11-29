@@ -45,7 +45,7 @@ const Onboarding = () => {
                 {/* Question 1 */}
                 {currentStep === 1 && (
                     <div>
-                        <label className='onboarding-label'>What's your name?</label>
+                        <label className='onboarding-label'>Wie möchtest du genannt werden?</label>
                         <input
                             className='onboarding-input'
                             type="text"
@@ -58,17 +58,12 @@ const Onboarding = () => {
                 {/* Question 2 */}
                 {currentStep === 2 && (
                     <div>
-                        <label className='onboarding-label'>How old are you?</label>
-                        <input
-                            className='onboarding-input'
-                            type="number"
-                            value={answers.question2}
-                            onChange={(e) => handleAnswerChange('question2', e.target.value)}
-                        />
+                        <p  className='onboarding-label' >Hier dreht sich alles darum, wie du deinen Alltag optimieren kannst. <br>
+                        </br>Wir starten mit ein paar kurzen Fragen, die helfen, dein volles Potenzial auszuschöpfen.</p>
                     </div>
                 )}
 
-                {/* Question 3 */}
+                {/* Question 3
                 {currentStep === 3 && (
                     <div>
                         <label className='onboarding-label'>How are you sleeping lately?</label>
@@ -83,7 +78,7 @@ const Onboarding = () => {
                 )}
 
                 {/* Question 4 */}
-                {currentStep === 4 && (
+                {/* {currentStep === 4 && (
                     <div>
                         <p className="onboarding-label">How do you feel?</p>
                         <EmotionWheel
@@ -93,10 +88,10 @@ const Onboarding = () => {
                             }}
                         />
                     </div>
-                )}
+                )} */}
 
                 {/* Question 5 */}
-                {currentStep === 5 && (
+                {/* {currentStep === 5 && (
                     <div>
                         <label className='onboarding-label'>What's your energy level?</label>
                         <input
@@ -106,25 +101,25 @@ const Onboarding = () => {
                             onChange={(e) => handleAnswerChange('question5', e.target.value)}
                         />
                     </div>
-                )}
+                )} */}
 
                 {/* Navigation Buttons */}
                 <div className="onboarding-navigation">
                     {currentStep > 1 && (
-                        <Button text="Previous" onClick={handlePrevious} />
+                        <Button text="Zurück" onClick={handlePrevious} />
                     )}
-                    {currentStep < 5 ? (
-                        <Button text="Next" onClick={handleNext} />
+                    {currentStep < 2 ? (
+                        <Button text="Nächste" onClick={handleNext} />
                     ) : (
-                        <Button text="Submit" onClick={handleSubmit} />
+                        <Button text="Weiter" onClick={handleSubmit} />
                     )}
                 </div>
             </div>
-            <img
+            {/* <img
                 src={photo}
                 alt="Happy"
                 className="landing-image"
-            />
+            /> */}
         </div>
     );
 };
