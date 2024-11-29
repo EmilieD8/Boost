@@ -1,0 +1,80 @@
+/* HomePage.css */
+
+/* General Page Styling */
+body {
+    background-color: #42302F; /* Dark background color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes up the full viewport height */
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header h1 {
+    align-items: left;
+    margin: 0;
+    padding: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Main Container */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allows the content area to expand and contract */
+    color: #BDD392; /* Light green text */
+}
+
+/* Greeting and Date */
+.home-greeting {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.home-date {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Content Area */
+.home-trackers {
+    flex: 1; /* Makes the trackers section flexible */
+    overflow-y: auto; /* Adds scroll if content overflows */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Questions */
+.home-questions {
+    color: #BDD392; /* Light green text */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2F1E1C; /* Slightly darker background for the footer */
+    color: #BDD392; /* Light green text for consistency */
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #5C4A48; /* Subtle border */
+    flex-shrink: 0; /* Prevents the footer from shrinking */
+}
+
+/* Ensure Footer is at the Bottom */
+body > .home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home-trackers {
+    flex: 1;
+}

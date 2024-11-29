@@ -9,11 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const Onboarding = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const [answers, setAnswers] = useState({
-        question1: '',
-        question2: '',
-        question3: '',
-        question4: '',
-        question5: ''
+        name: '',
     });
 
     // Update answers state
@@ -39,10 +35,13 @@ const Onboarding = () => {
    
     // Handle form submission (final step)
     const handleSubmit = () => {
+        const todayDate = new Date().toISOString().split('T')[0]; // ISO format
         localStorage.setItem('onboardingAnswers', JSON.stringify(answers));
+        localStorage.setItem('name', answers.name); 
+        localStorage.setItem('date', todayDate);
         navigate('/home');
     };
-
+    
     return (
         <div className="onboarding-container">
             <div className="onboarding-form">
@@ -53,8 +52,8 @@ const Onboarding = () => {
                         <input
                             className='onboarding-input'
                             type="text"
-                            value={answers.question1}
-                            onChange={(e) => handleAnswerChange('question1', e.target.value)}
+                            value={answers.name}
+                            onChange={(e) => handleAnswerChange('name', e.target.value)}
                         />
                     </div>
                 )}
