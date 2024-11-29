@@ -6,11 +6,12 @@
     height: 100vh; /* Full viewport height */
     width: 100%; /* Full width */
     margin: 0;
-    padding: 0;
+    padding: 35px;
     box-sizing: border-box;
-    text-align: center;
-    background-color: #42302F;
-    font-family: 'Poppins', sans-serif;
+    /* text-align: center; */
+    background-color: #142b22;
+    /* font-family: 'Poppins', sans-serif; */
+	font-family: 'Impact', sans-serif;
     position: relative; /* Required for absolutely positioned elements */
 }
 
@@ -18,31 +19,40 @@
 .landing-content {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically within the available space */
-    align-items: center;
+    /* justify-content: center; Center vertically within the available space */
+    align-items: flex-start; 
     flex: 1; /* Grow to take up available vertical space */
+	text-align: left;
+	z-index: 10;
 }
 
 /* Heading styling */
 .landing-heading {
-    color: #BDD392;
-    font-size: 4em;
+    color: #d0ceba;
+    font-size: 6.5em;
     font-weight: 900;
-    font-style: italic;
-    margin: 0.2em 0;
+    /* font-style: italic; */
+    margin-top: 0.4em;
+	margin-bottom: 0;
 }
 
 /* Subheading styling */
 .landing-subheading {
-    color: #BDD392;
+    color: #d0ceba;
     font-size: 1.5em;
-    font-style: italic;
+	 font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+    /* font-style: italic; */
+	text-align: left;
     margin: 0.2em 0 2em 0;
 }
 
 /* Button container styling */
 .landing-button-container {
-    margin-top: 1em;
+    margin-top: 25em;
+	margin-left: auto;
+	margin-right: auto;
+
 }
 
 /* Image styling */
@@ -52,4 +62,5 @@
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     object-fit: cover; /* Ensure the image scales proportionally */
+	z-index: 0;
 }

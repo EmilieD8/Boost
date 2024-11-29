@@ -46,9 +46,13 @@ const Onboarding = () => {
         <div className="onboarding-container">
             <div className="onboarding-form">
                 {/* Question 1 */}
+			<h2 className="onboarding-heading">
+                     {/* Willkommen bei  */}
+					 BOOST
+                </h2>
                 {currentStep === 1 && (
                     <div>
-                        <label className='onboarding-label'>Wie möchtest du genannt werden?</label>
+                        <p className='onboarding-label'>Wie möchtest du genannt werden?</p>
                         <input
                             className='onboarding-input'
                             type="text"
