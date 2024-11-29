@@ -14,15 +14,15 @@ const Slider = () => {
     <div className="slider-container">
       <div className="scale">
         {/* Labels for the scale */}
-        <span>1</span>
-        <span>10</span>
+        <span className="scale-min">0</span>
+        <span className="scale-max">5</span>
       </div>
 
       {/* Range slider with the value between 1 and 10 */}
       <input
         type="range"
-        min="1"
-        max="10"
+        min="0"
+        max="5"
         value={value}
         onChange={handleChange}
         className="slider"
