@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import Onboarding from './pages/Onboarding';
 import HomePage from './pages/HomePage';
 import Blog from './pages/Blog';
+// import Test from './pages/Test';
 
 function App() {
   return (
