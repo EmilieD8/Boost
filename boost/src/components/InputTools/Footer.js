@@ -20,7 +20,7 @@ function Footer () {
         <RxFileText size={30}/>
         </button>
 
-        <button className="footer-button">
+        <button className="footer-button" onClick={() => navigate("/community")}>
         Community
         <GiThreeFriends size={30}/>
         </button>
