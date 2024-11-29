@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button/Button';
 import photo from '../images/landing_axe.png';
-import './LandingPage.css'; // Import the CSS file
+import './LandingPage.css';
 
 function LandingPage() {
     const navigate = useNavigate();
@@ -21,9 +21,9 @@ function LandingPage() {
                 <p className="landing-subheading">
                     Get to the core of your inner forest!
                 </p>
-            <div className="landing-button-container">
-                <Button text="Continue" onClick={navigateToOnboarding} />
-            </div>
+                <div className="landing-button-container">
+                    <Button text="Continue" onClick={navigateToOnboarding} />
+                </div>
             </div>
             {/* Image */}
             <img 
@@ -31,9 +31,6 @@ function LandingPage() {
                 alt="Happy"
                 className="landing-image" 
             />
-            
-            {/* Button */}
-            
         </div>
     );
 }

@@ -2,7 +2,6 @@
 .landing-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space between top/middle content and bottom image */
     align-items: center;
     height: 100vh; /* Full viewport height */
     width: 100%; /* Full width */
@@ -12,15 +11,16 @@
     text-align: center;
     background-color: #42302F;
     font-family: 'Poppins', sans-serif;
+    position: relative; /* Required for absolutely positioned elements */
 }
 
 /* Top content (heading and subheading) */
 .landing-content {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
+    justify-content: center; /* Center vertically within the available space */
     align-items: center;
-    flex: 1; /* Take up available space */
+    flex: 1; /* Grow to take up available vertical space */
 }
 
 /* Heading styling */
@@ -40,18 +40,16 @@
     margin: 0.2em 0 2em 0;
 }
 
-/* Image styling */
-.landing-image {
-    max-width: 100%; /* Ensure image scales properly */
-    height: auto;
-    object-fit: contain; /* Keeps image aspect ratio */
-    margin-bottom: 0; /* Prevent gaps below the image */
-}
-
 /* Button container styling */
 .landing-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 1em;
+}
+
+/* Image styling */
+.landing-image {
+    position: absolute;
+    bottom: 0; /* Align image to the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    object-fit: cover; /* Ensure the image scales proportionally */
 }
