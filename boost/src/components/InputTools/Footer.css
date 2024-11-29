@@ -1,10 +1,10 @@
 /* Footer.css */
 .footer {
     display: flex;
-    justify-content: space-around; /* Space the buttons evenly */
+    /* justify-content: space-around; */
     align-items: center; /* Align items vertically */
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #6f6b50;
     position: fixed;
     bottom: 0;
 	padding-left: 2em;
@@ -16,11 +16,11 @@
   .footer-button {
     display: flex;
     align-items: center;
-    background-color: #61dafb;
+    background-color: #8e3a18;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    color: #282c34;
+    color: #d0ceba;
     cursor: pointer;
     border-radius: 25px;
     transition: background-color 0.3s ease;
@@ -31,6 +31,6 @@
   }
   
   .footer-button:hover {
-    background-color: #21a1f1;
+    background-color: #21f12b;
   }
   

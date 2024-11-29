@@ -10,18 +10,21 @@ function Footer () {
     const navigate = useNavigate();
     return (
         <div className="footer">
+			
         <button className="footer-button" onClick={() => navigate("/home")}>        
-        Tracker
+        {/* Tracker */}
         <FaListCheck size={30}/>
         </button>
+		<span> &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; </span>
 
         <button className="footer-button" onClick={() => navigate("/blog")}>        
-        Resources
+        {/* Resources */}
         <RxFileText size={30}/>
         </button>
+		<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  </span>
 
         <button className="footer-button" onClick={() => navigate("/community")}>
-        Community
+        {/* Community */}
         <GiThreeFriends size={30}/>
         </button>
         
