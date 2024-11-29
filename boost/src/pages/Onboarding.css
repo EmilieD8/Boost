@@ -5,7 +5,7 @@
     align-items: center; /* Center content vertically */
     height: 100vh; /* Full viewport height */
     width: 100%; /* Full width */
-    background-color: #42302F; /* Background color */
+    background-color: #142b22; /* Background color */
     box-sizing: border-box; /* Include padding in width/height */
     position: relative; /* Required for absolutely positioned child elements */
 }
@@ -16,7 +16,7 @@
     align-items: center;
     width: 80%; /* Occupy 80% of the width */
     max-width: 400px; /* Limit maximum width */
-    color: #BDD392; /* Matching text color */
+    color: #d0ceba; /* Matching text color */
 }
 
 /* Styling for the label (question) */
@@ -24,7 +24,7 @@
     font-size: 2.5rem; /* Bigger text for emphasis */
     font-weight: bold;
     text-align: center; /* Center-align the text */
-    color: #BDD392;
+    color: #d0ceba;
     margin-bottom: 40px; /* Space below question */
 }
 
