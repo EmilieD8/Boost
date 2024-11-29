@@ -11,6 +11,7 @@ const HomePage = () => {
     const [saved, setSaved] = useState(false); // Track whether save has been clicked
     const [name, setName] = useState('');
     const [answers, setAnswers] = useState({});
+    const [yesNoValues, setYesNoValues] = useState({ train: null, talk: null }); // State for YesNo inputs
     const today = new Date().toISOString().split('T')[0]; // Get today's date in ISO format (YYYY-MM-DD)
     const [dateDifference, setDateDifference] = useState(0); // Example date difference
 
@@ -55,6 +56,12 @@ const HomePage = () => {
         setSliderValues(newSliderValues);
     };
 
+    
+
+    const handleYesNoChange = (field, value) => {
+        setYesNoValues((prev) => ({ ...prev, [field]: value }));
+    };
+
     const handleSave = () => {
         const today = new Date().toISOString().split('T')[0]; // Get today's date in ISO format (YYYY-MM-DD)
 
@@ -88,7 +95,7 @@ const HomePage = () => {
             return "Es scheint dir gerade etwas die Kraft zu rauben. Das ist ein Signal, auf das du hören solltest – so wie du auf deinen Körper hörst, wenn ein Muskel überfordert ist. Vielleicht ist es an der Zeit, mit jemandem zu sprechen, der dir dabei helfen kann, wieder klarer zu denken und stärker zu werden.";
         } else if (dateDifference === 5) {
             return "Es scheint, als würde dich etwas länger ausbremsen, als dir lieb ist. Starke Männer wissen, wann es Zeit ist, Unterstützung zu holen – das ist kein Zeichen von Schwäche, sondern von Fokus und Willenskraft. Hier findest du Angebote, die dir helfen können, wieder voll durchzustarten.";
-        } 
+        }
         else {
             return "land";
         }
@@ -108,12 +115,16 @@ const HomePage = () => {
                     <p className="home-questions">Wie hast du geschlafen?</p>
                     <Slider value={sliderValues[1]} onChange={(value) => handleSliderChange(1, value)} />
                     <p className="home-questions">Hast du heute trainiert?</p>
-                    <YesNo />
-                    <p className="home-questions">Wie war dein Energielevel heute?</p>
+                    <YesNo
+                        value={yesNoValues.train}
+                        onChange={(value) => handleYesNoChange("train", value)}
+                    />                    <p className="home-questions">Wie war dein Energielevel heute?</p>
                     <Slider value={sliderValues[2]} onChange={(value) => handleSliderChange(2, value)} />
                     <p className="home-questions">Hatten Sie Zeit, mit Ihren Freunden oder Ihrer Familie zu sprechen?</p>
-                    <YesNo />
-
+                    <YesNo
+                        value={yesNoValues.talk}
+                        onChange={(value) => handleYesNoChange("talk", value)}
+                    />
                     <div className="submit">
                         <Button text="Save" onClick={handleSave} />
                     </div>
@@ -124,7 +135,7 @@ const HomePage = () => {
             {saved && (
                 <div className="message-container">
                     <p> Tips:</p>
-                        <p className='message-shown'>{getMessageForDateDifference()}</p>
+                    <p className='message-shown'>{getMessageForDateDifference()}</p>
                 </div>
             )}
 
