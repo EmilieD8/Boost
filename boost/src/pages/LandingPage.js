@@ -8,6 +8,10 @@ function LandingPage() {
     const navigate = useNavigate();
 
     const navigateToOnboarding = () => {
+        if (localStorage.getItem('onboardingAnswers')) {
+            navigate('/home');
+            return;
+        }
         navigate('/onboarding');
     };
 

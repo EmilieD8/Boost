@@ -3,6 +3,7 @@ import './Onboarding.css'; // Assuming you have a stylesheet
 import Button from '../components/Button/Button';
 import photo from '../images/landing_axe.png';
 import EmotionWheel from '../components/EmotionWheel/EmotionWheel';
+import { useNavigate } from 'react-router-dom';
 
 
 const Onboarding = () => {
@@ -33,10 +34,13 @@ const Onboarding = () => {
         setCurrentStep(currentStep - 1);
     };
 
+    const navigate = useNavigate();
+
+   
     // Handle form submission (final step)
     const handleSubmit = () => {
         localStorage.setItem('onboardingAnswers', JSON.stringify(answers));
-
+        navigate('/home');
     };
 
     return (
