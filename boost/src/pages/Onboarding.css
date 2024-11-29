@@ -5,6 +5,7 @@
     align-items: center; /* Center content vertically */
     height: 100vh; /* Full viewport height */
     width: 100%; /* Full width */
+	padding: 35px;
     background-color: #142b22; /* Background color */
     box-sizing: border-box; /* Include padding in width/height */
     position: relative; /* Required for absolutely positioned child elements */
