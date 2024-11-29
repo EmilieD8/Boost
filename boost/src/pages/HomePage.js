@@ -67,7 +67,7 @@ const HomePage = () => {
                 <YesNo/>
                 <p className="home-questions">Wie war dein Energielevel heute?</p>
                 <Slider/>
-                <p className="home-questions">Hatten Sie Zeit, mit Ihren Freunden oder Ihrer Familie zu sprechen?</p>
+                <p className="home-questions">Hattest du Zeit, mit deinen Freunden oder deiner Familie zu sprechen?</p>
                 <YesNo/>
             </div>
         <Footer/>
