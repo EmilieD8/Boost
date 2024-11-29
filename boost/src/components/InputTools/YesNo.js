@@ -16,15 +16,10 @@ const YesNoInput = () => {
   };
 
   return (
-    <div className="yes-no-container">
-      <h2>Do you want to continue?</h2>
-      
+    <div className="yes-no-container">      
       {/* Display buttons for Yes and No */}
       <button onClick={handleYesClick}>Yes</button>
       <button onClick={handleNoClick}>No</button>
-
-      {/* Optionally, display a message based on user's choice */}
-      <p>You selected: {userChoice}</p>
     </div>
   );
 };
