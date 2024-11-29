@@ -16,22 +16,32 @@ function BlogTeaser({ fileName }) {
     // Create a preview by extracting the first paragraph
     const preview = htmlContent.split('</p>')[0] + '</p>';
 
+    const divStyle = {
+        backgroundColor: 'white',
+        borderRadius: '20px',     // Rounded edges
+        padding: '20px',
+        margin: '20px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' // Optional shadow for depth
+    };
+
     return (
-        <div>
+        <div
+            style={divStyle}
+            onClick={() => setShowFull(!showFull)}
+        >
             {showFull
                 ? <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
                 : <div dangerouslySetInnerHTML={{ __html: preview }} />
             }
-            <button onClick={() => setShowFull(!showFull)}>
-                {showFull ? 'Weniger anzeigen' : 'Mehr lesen'}
-            </button>
         </div>
     );
 }
 
 const Blog = () => {
-    const files = ['yourfile.html',
-        'yourfile copy.html',
+    const files = [
+        'Essen als Energiequelle.html',
+        'Kommunikation und Gefühle verstehen.html',
+        'Gefühle verstehen.html',
     ];
 
     return (
