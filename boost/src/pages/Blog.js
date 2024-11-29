@@ -1,20 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/InputTools/Footer';
 
-const Blog = () => {
-    const [content, setContent] = useState('');
+
+function BlogTeaser({ fileName }) {
+    const [htmlContent, setHtmlContent] = useState('');
+    const [showFull, setShowFull] = useState(false);
 
     useEffect(() => {
-        fetch('/yourfile.html')
+        fetch(`/${fileName}`)
             .then(response => response.text())
-            .then(data => setContent(data))
-            .catch(error => console.error('Error fetching the blog article file:', error));
-    }, []);
+            .then(data => setHtmlContent(data))
+            .catch(error => console.error(`Error fetching ${fileName}:`, error));
+    }, [fileName]);
+
+    // Create a preview by extracting the first paragraph
+    const preview = htmlContent.split('</p>')[0] + '</p>';
 
     return (
         <div>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-            <Footer/>
+            {showFull
+                ? <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+                : <div dangerouslySetInnerHTML={{ __html: preview }} />
+            }
+            <button onClick={() => setShowFull(!showFull)}>
+                {showFull ? 'Weniger anzeigen' : 'Mehr lesen'}
+            </button>
+        </div>
+    );
+}
+
+const Blog = () => {
+    const files = ['yourfile.html',
+        'yourfile copy.html',
+    ];
+
+    return (
+        <div>
+            {files.map(fileName => (
+                <BlogTeaser key={fileName} fileName={fileName} />
+            ))}
+            <Footer />
         </div>
     );
 };

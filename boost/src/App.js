@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import Onboarding from './pages/Onboarding';
 import HomePage from './pages/HomePage';
-// import Blog from './pages/Blog';
-// import Test from './pages/Test';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -13,8 +12,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/home" element={<HomePage/>} />
-        {/* <Route path="/blog" element={<Blog/>} />
-        <Route path="/test" element={<Test/>} /> */}
+        <Route path="/blog" element={<Blog/>} />
       </Routes>
     </Router>
   );
