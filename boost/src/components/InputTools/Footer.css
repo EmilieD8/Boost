@@ -10,7 +10,7 @@
 	padding-left: 2em;
 	padding-right: 2em;
     width: 100%;
-    color: white;
+    /* color: white; */
   }
   
   .footer-button {
@@ -23,6 +23,9 @@
     color: #d0ceba;
     cursor: pointer;
     border-radius: 25px;
+    overflow: auto;
+margin-left: 10px;
+margin-right: 10px;
     transition: background-color 0.3s ease;
   }
 
