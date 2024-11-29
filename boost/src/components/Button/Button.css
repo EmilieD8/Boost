@@ -7,5 +7,13 @@
     border-radius: 20px;
     font-weight: 600;
     font-size: medium;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
 
+.blue-button:active {
+    background-color: #BDD392;
+    color: #42302F;
+    border: 1px solid #42302F;
 }
