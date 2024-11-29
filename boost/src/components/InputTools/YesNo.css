@@ -2,27 +2,24 @@
 .yes-no-container {
     text-align: center;
   } 
-  
-  
-  /* button {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
+
+
+  .button {
+    background-color: #42302F;
+    color: #BDD392;
+    border: 1px solid #BDD392;
     padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
+    margin-top: 30px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: medium;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #8e3a18;
-  }
-  
-  p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  }
-   */
+    margin-left: 10px;
+}
+
+.button:active {
+    background-color: #BDD392;
+    color: #42302F;
+    border: 1px solid #42302F;
+}

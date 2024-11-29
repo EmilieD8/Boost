@@ -5,8 +5,8 @@ import Button from '../Button/Button';
 const YesNoInput = ({ value, onChange }) => {
   return (
     <div className="yes-no-container">
-      <Button text="Ja" onClick={() => onChange("Yes")} className={value === "Yes" ? "active" : ""}/>
-      <Button text="Nein" onClick={() => onChange("No")} className={value === "No" ? "active" : ""}/>
+      <Button className='button' text="Ja" onClick={() => onChange("Yes")}/>
+      <Button className='button' text="Nein" onClick={() => onChange("No")}/>
     </div>
   );
 };
