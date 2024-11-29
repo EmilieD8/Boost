@@ -128,9 +128,9 @@ const HomePage = () => {
                 </div>
             )}
 
-            <div className="footer">
+
                 <Footer />
-            </div>
+
         </div>
     );
 };

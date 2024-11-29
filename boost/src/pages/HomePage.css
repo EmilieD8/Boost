@@ -45,19 +45,23 @@ body {
     overflow-y: auto; /* Adds scroll if content overflows */
     padding: 20px;
     margin-top: 20px;
-	background-color: #3a3738;
+	background-color: #142b22;
+	border-radius: 30px;
+	margin-bottom: 35px;
 }
 
 /* Questions */
 .home-questions {
-    color: #BDD392; /* Light green text */
-    font-size: 1.2em;
+    color: #d0ceba;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+    font-size: 1.1em;
     margin-bottom: 10px;
 }
 
 /* Footer Styling */
 .footer {
-    background-color: #2F1E1C; /* Slightly darker background for the footer */
+    background-color: #6f6b50; /* Slightly darker background for the footer */
     color: #BDD392; /* Light green text for consistency */
     text-align: center;
     padding: 10px 0;
