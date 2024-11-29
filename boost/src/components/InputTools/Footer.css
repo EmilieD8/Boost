@@ -1,0 +1,34 @@
+/* Footer.css */
+.footer {
+    display: flex;
+    justify-content: space-around; /* Space the buttons evenly */
+    align-items: center; /* Align items vertically */
+    padding: 10px;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+  }
+  
+  .footer-button {
+    display: flex;
+    align-items: center;
+    background-color: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #282c34;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+
+  .footer-button svg {
+    margin-left: 15px; /* Add space between the icon and text (adjust the value as needed) */
+  }
+  
+  .footer-button:hover {
+    background-color: #21a1f1;
+  }
+  

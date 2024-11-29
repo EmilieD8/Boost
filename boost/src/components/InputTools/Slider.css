@@ -1,0 +1,17 @@
+.scale {
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 200px;
+
+}
+
+.value-display {
+    display: flex;
+    align-items: center;
+}
