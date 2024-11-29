@@ -1,32 +1,35 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 /* General container styling */
 .landing-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
+    justify-content: space-between; /* Space between top/middle content and bottom image */
+    align-items: center;
     height: 100vh; /* Full viewport height */
-    width: 100; /* Full viewport width */
-    margin: 0; /* Remove default margins */
-    box-sizing: border-box; /* Include padding and borders in dimensions */
-    text-align: center; /* Center text within child elements */
+    width: 100%; /* Full width */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
     background-color: #42302F;
-    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    font-family: 'Poppins', sans-serif;
+}
 
+/* Top content (heading and subheading) */
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center;
+    flex: 1; /* Take up available space */
 }
 
 /* Heading styling */
 .landing-heading {
     color: #BDD392;
     font-size: 4em;
-    font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: italic;
-    margin-bottom: 0.5em; /* Add spacing below */
-    word-wrap: break-word; /* Prevent text overflow */
-    max-width: 90%;
+    margin: 0.2em 0;
 }
 
 /* Subheading styling */
@@ -34,17 +37,15 @@
     color: #BDD392;
     font-size: 1.5em;
     font-style: italic;
-    margin-bottom: 1em; /* Add spacing below */
-    word-wrap: break-word; /* Prevent text overflow */
-    max-width: 90%;
+    margin: 0.2em 0 2em 0;
 }
 
 /* Image styling */
 .landing-image {
-    max-width: 100%; /* Scale image to fit container */
-    max-height: 50vh; /* Prevent image from taking too much vertical space */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 1em; /* Add spacing below */
+    max-width: 100%; /* Ensure image scales properly */
+    height: auto;
+    object-fit: contain; /* Keeps image aspect ratio */
+    margin-bottom: 0; /* Prevent gaps below the image */
 }
 
 /* Button container styling */
@@ -52,12 +53,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   cursor: pointer;
-    transition: all 0.3s ease; /* Add hover effect transition */
-}
-
-/* Button hover effect */
-.landing-button-container:hover {
-    background-color: #A8C168; /* Darker green on hover */
-    color: #FFFFFF; /* White text on hover */
+    margin-top: 1em;
 }

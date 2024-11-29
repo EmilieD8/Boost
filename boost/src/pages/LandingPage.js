@@ -1,9 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
+import photo from '../images/landing_axe.png';
 import './LandingPage.css'; // Import the CSS file
-import svgImage from '../images/landing_backgnd.svg'; // Adjust the path as needed
-
 
 function LandingPage() {
     const navigate = useNavigate();
@@ -14,18 +13,27 @@ function LandingPage() {
 
     return (
         <div className="landing-container">
-            <h2 className="landing-heading">
-                BOOST
-            </h2>
-            <p className="landing-subheading">
-                Get to the core of your inner forest
-            </p>
-            <div className="landing-svg">
-            <img src={svgImage} alt="Illustration" className="landing-image" />
-            </div>
+            {/* Content Wrapper */}
+            <div className="landing-content">
+                <h2 className="landing-heading">
+                    BOOST
+                </h2>
+                <p className="landing-subheading">
+                    Get to the core of your inner forest!
+                </p>
             <div className="landing-button-container">
                 <Button text="Continue" onClick={navigateToOnboarding} />
             </div>
+            </div>
+            {/* Image */}
+            <img 
+                src={photo}
+                alt="Happy"
+                className="landing-image" 
+            />
+            
+            {/* Button */}
+            
         </div>
     );
 }
