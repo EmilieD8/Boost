@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 function Footer () {
     const navigate = useNavigate();
     return (
-        <footer className="footer">
+        <div className="footer">
         <button className="footer-button" onClick={() => navigate("/home")}>        
         Tracker
         <FaListCheck size={30}/>
@@ -25,7 +25,7 @@ function Footer () {
         <GiThreeFriends size={30}/>
         </button>
         
-        </footer>
+        </div>
         
     );
 }

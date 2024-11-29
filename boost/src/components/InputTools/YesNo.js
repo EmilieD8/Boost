@@ -6,6 +6,7 @@ const YesNoInput = ({ value, onChange }) => {
   return (
     <div className="yes-no-container">
       <Button className='button' text="Ja" onClick={() => onChange("Yes")}/>
+	  <span> &nbsp;&nbsp;&nbsp; </span>
       <Button className='button' text="Nein" onClick={() => onChange("No")}/>
     </div>
   );
